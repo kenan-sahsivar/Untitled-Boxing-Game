@@ -19,6 +19,7 @@ package-lock.json
 
 # OS junk
 .DS_Store
+._*
 Thumbs.db
 Desktop.ini
 ehthumbs.db
