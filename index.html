@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Boxing Game</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div id="name-screen">
+    <h2 id="name-screen-header">What's your name?</h2>
+    <input type="text" id="player-name" placeholder="ENTER NAME" style="text-transform:uppercase">
+    <div style="display: flex">
+        <button id="submit-name" onclick="start()" class="name">Start</button>
+        <button onclick="select(7)" class="name" id="nameBack" style="display: none">Back</button>
+    </div>
+
+</div>
+
+<div id="title-screen">
+    <div id="title-container">
+        <h1>Untitled Boxing Game</h1>
+        <h2 id="menuText">Main Menu</h2>
+        <div id="button-container">
+            <div id="select2" style="display: none">
+                <div class="button-wrapper">
+                    <button onclick="select(7)">Back</button>
+                </div>
+                <div class="button-wrapper">
+                    <button onclick="select(0)">Beginner</button>
+                </div>
+                <div class="button-wrapper">
+                    <button onclick="select(1)">Advanced</button>
+                </div>
+                <div class="button-wrapper">
+                    <button onclick="select(2)">2 Player</button>
+                </div>
+            </div>
+            <div id="select3" style="display: none">
+                <div class="button-wrapper">
+                    <button onclick="select(7)">Back</button>
+                </div>
+                <div class="button-wrapper">
+                    <button onclick="loadSaveState()">Load State</button>
+                </div>
+                <div class="button-wrapper">
+                    <button onclick="saveSaveState()">Save State</button>
+                </div>
+            </div>
+            <div id="select1" style="display: flex">
+                <div class="button-wrapper">
+                    <button onclick="select(3)">Practice</button>
+                </div>
+                <div class="button-wrapper">
+                    <button onclick="select(5)">Ranked</button>
+                </div>
+                <div class="button-wrapper">
+                    <button onclick="select(8)">Save/Load</button>
+                </div>
+            </div>
+        </div>
+        <p>Press ENTER to select</p>
+    </div>
+</div>
+<div id="gameInteract">
+    <div id="playAgainMenu">
+        <div id="button-a">
+            <div id="a" style="display: flex">
+                <div class="button-wrapper">
+                    <button onclick="select(10)">Main Menu</button>
+                </div>
+                <div class="button-wrapper" id="playAgain">
+                    <button onclick="select(9)">Again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <canvas id="gameWindow" width="960px" height="540px"></canvas>
+</div>
+<div id="rank-board" style="display: none;">
+    <div id="leaderboard-list-wrapper">
+        <h2>League</h2>
+        <div id="leaderboard-list"></div>
+    </div>
+    <div class="button-wrapper" style="display: flex">
+        <button id="challenge" onclick="challenge()">CHALLENGE</button>
+        <button onclick="select(7)" class="name">Back</button>
+    </div>
+</div>
+
+
+<div id="popup-toast"></div>
+<script src="js/canvas.js"></script>
+<script src="js/entities.js"></script>
+<script src="js/state.js"></script>
+<script src="js/combat.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/render.js"></script>
+<script src="js/game.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/input.js"></script>
+</body>
+</html>
