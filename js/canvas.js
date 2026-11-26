@@ -5,9 +5,9 @@ canvas.style.imageRendering = "pixelated"; // For modern browsers
 let menu = document.getElementById("playAgainMenu");
 
 let background = new Image()
-background.src = "Resources/Background/background.png"
+background.src = "Resources/Background/Background.png"
 
 let clock = new Image()
-clock.src = "Resources/Background/clock.png"
+clock.src = "Resources/Background/Clock.png"
 
 let animateLoop
